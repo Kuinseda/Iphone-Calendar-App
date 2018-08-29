@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
+    <entity name="Coursework" representedClassName=".Coursework">
+        <attribute name="cwkName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="duedate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="marks" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="modlvl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="reminderdate" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="cwToTask" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="taskToCw" inverseEntity="Task" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <entity name="Task" representedClassName=".Task" syncable="YES">
+        <attribute name="complete" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="cwkName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="days" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="endTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="taskDueDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="taskName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="taskReminder" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="taskToCw" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Coursework" inverseName="cwToTask" inverseEntity="Coursework" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Coursework" positionX="261" positionY="189" width="128" height="180"/>
+        <element name="Task" positionX="261" positionY="252" width="128" height="195"/>
+    </elements>
+</model>
